@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS Selectors</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+
+    <div class="hero-unit">
+      <h1>CSS & its pseduo selectors</h1>
+      <section class="links">
+          <h2>Links</h2>
+          <code>Here's some css!</code>
+          <p><a href="http://www.urbanoutfitters.com/urban/index.jsp">Urban Outfitters</a></p>
+          <p><a href="http://freepeople.com">Free People</a></p>
+          <!-- <div><a href="#target-content">Anchor link!</a></div>
+          <div id="target-content" name="target-content">This content is inside of an anchor link target.</div> -->
+      </section>
+      <section class="forms">
+        <form action="">
+            <div>
+                <label for="firstname">First Name:</label>
+                <input type="text" name="firstname" placeholder="Name, please" required />
+            </div>
+            <div>
+                <label for="lastname">Last Name:</label>
+                <input type="text" name="lastname" placeholder="I'm disabled" disabled="disabled" />
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" name="email" placeholder="Email goes here" />
+            </div>
+            <!-- <div>
+                <label for="colors">Favorite color:</label>
+                <select name="colors" id="colors" name="colors">
+                    <option value="" selected="selected">Choose a color</option>
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                </select>
+            </div> -->
+            <div>
+                <fieldset>
+                    <legend>Favorite fruit:</legend>
+                    <div>
+                        <input type="checkbox" name="fruit1" id="" value="apple" />
+                        <label for="fruit1">Apple</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="fruit2" id="" value="orange" />
+                        <label for="fruit2">Orange</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="fruit3" id="" value="banana" />
+                        <label for="fruit3">Banana</label>
+                    </div>
+                </fieldset>
+            </div>
+            <div>
+                <fieldset>
+                    <legend>Required field</legend>
+                    <input type="checkbox" name="required-field" value="true" required="required" />
+                    <label for="required-field">Better check this one</label>
+                </fieldset>
+            </div>
+        </form>
+      </section>
+      <section class="other-stuff">
+          <h2>Other random useful stuff</h2>
+          <div>
+              <p class="highlight">This text will have some awesome styling!</p>
+              <p>This text won't because it doesn't have the <code>highlight</code> class.</p>
+          </div>
+          <div class="">
+              <h3>We can easily select the first or last child inside a container</h3>
+              <ul class="first-last">
+                  <li>Ham</li>
+                  <li>Potatoes</li>
+                  <li>Pizza</li>
+                  <li>Chicken</li>
+                  <li>Ice Cream</li>
+              </ul>
+          </div>
+          <div>
+              <h3>Or the first or last of a specific type of element</h3>
+              <div class="first-of-type">
+                  <p>We have lots of text, some wrapped in <code>p</code> tags, some wrapped in <code>div</code> tags.</p>
+                  <p>Here's some text.</p>
+                  <div>This text is inside of a <code>div</code> tag, not a <code>p</code> tag.</div>
+                  <p>Weird, another <code>p</code> tag.</p>
+                  <div>And another <code>div</code>, both unstyled.</div>
+              </div>
+          </div>
+          <div>
+              <h3>We can alternate styles in lists</h3>
+              <h4>For all even elements</h4>
+              <ul class="even">
+                  <li>Jeans</li>
+                  <li>T-Shirts</li>
+                  <li>Shoes</li>
+                  <li>Hats</li>
+                  <li>Drop-Crotch Sweatpants</li>
+              </ul>
+              <h4>For all odd elements</h4>
+              <ul class="odd">
+                  <li>Jeans</li>
+                  <li>T-Shirts</li>
+                  <li>Shoes</li>
+                  <li>Hats</li>
+                  <li>Drop-Crotch Sweatpants</li>
+              </ul>
+          </div>
+          <div>
+              <h3><code>:nth-child()</code> was our friend&hellip;</h3>
+              <ul class="nth-child">
+                  <li>Jeans</li>
+                  <li>T-Shirts</li>
+                  <li>Shoes</li>
+                  <li>Hats</li>
+                  <li>Drop-Crotch Sweatpants</li>
+                  <li>Dresses</li>
+                  <li>Swimsuits</li>
+                  <li>Apartment</li>
+                  <li>Yoga Pants</li>
+              </ul>
+          </div>
+          <div>
+              <h3>Until iOS 8 ruined the party</h3>
+              <h4><code>:nth-of-type()</code> to the rescue!</h4>
+              <ul class="nth-of-type">
+                  <li>Jeans</li>
+                  <li>T-Shirts</li>
+                  <li>Shoes</li>
+                  <li>Hats</li>
+                  <li>Drop-Crotch Sweatpants</li>
+                  <li>Dresses</li>
+                  <li>Swimsuits</li>
+                  <li>Apartment</li>
+                  <li>Yoga Pants</li>
+              </ul>
+              <p>Both of the above have corresponding `last` selectors, which count in reverse, as well.</p>
+              <div class="only-child">
+                  <h3>There's even an <code>:only-child</code> pseudo-selector! In case you didn't know, Tom is an only child.</h3>
+              </div>
+          </div>
+      </section>
+      <section>
+          <h2>Pseudo Elements</h2>
+          <div class="pseudo-elements">
+              <p>This text has a <code>:before</code> and <code>:after</code> element.</p>
+          </div>
+      </section>
+    </div>
+
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+
+
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+  </body>
+</html>

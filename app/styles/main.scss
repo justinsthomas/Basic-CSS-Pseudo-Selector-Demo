@@ -1,0 +1,187 @@
+// bower:scss
+// endbower
+
+body {
+  background: #fafafa;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+}
+
+.hero-unit {
+  margin: 0 auto;
+  width: 800px;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 30px;
+  background-color: #eee;
+  border-radius: 10px;
+  padding: 60px;
+
+  h1 {
+    font-size: 60px;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+}
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+div{
+    border-bottom: 1px dashed #222;
+    margin-bottom: 5px;
+    padding-bottom: 25px;
+
+    form &{
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+}
+
+form{
+    margin-bottom: 25px;
+}
+
+a{
+    color: #222;
+
+    &:link{
+        text-decoration: none;
+    }
+
+    &:visited{
+        color: #777;
+    }
+
+    &:hover{
+        text-decoration: underline;
+    }
+
+    &:active{
+        text-decoration: line-through;
+    }
+}
+
+code{
+    background-color: #ee9;
+    padding: 0 5px;
+}
+
+input{
+    &:enabled{
+        border: 2px solid cyan;
+    }
+
+    &:disabled{
+        background-color: #ddd;
+        border: 2px solid #222;
+    }
+
+    &:focus{
+        border: 2px dotted magenta;
+    }
+
+    &:required{
+        border: 2px solid orange;
+    }
+
+    &:valid{
+        border: 2px solid green;
+    }
+
+    &[type="email"]:invalid{
+        border: 2px solid red;
+    }
+}
+
+.first-last{
+    :first-child, :last-child{
+        background-color: cyan;
+    }
+}
+
+.first-of-type{
+    border-bottom: none;
+
+    div{
+        border-bottom: none;
+
+        &:first-of-type{
+            background-color: lighten(green, 50%);
+        }
+    }
+    p{
+        &:first-of-type{
+            background-color: lighten(red, 25%);
+        }
+    }
+}
+
+.even{
+    :nth-child(even){
+        background-color: cyan;
+    }
+}
+
+.odd{
+    :nth-child(odd){
+        background-color: cyan;
+    }
+}
+
+.nth-child{
+    :nth-child(3n + 1){
+        background-color: cyan;
+    }
+}
+
+.nth-of-type{
+    :nth-of-type(3n + 1){
+        background-color: cyan;
+    }
+}
+
+.only-child{
+    :only-child{
+        background-color: #000;
+        color: #fff;
+        padding: 5px;
+    }
+}
+
+.pseudo-elements{
+    p{
+        position: relative;
+
+        &:before{
+            background-color: lighten(teal, 15%);
+            content: '';
+            display: block;
+            height: 20px;
+            padding: 5px;
+            position: relative;
+            top: 0;
+            width: 100%;
+        }
+
+        &:after{
+            background-color: lighten(orange, 15%);
+            content: ':after';
+            display: block;
+            height: 20px;
+            padding: 5px;
+            position: relative;
+            top: 0;
+            width: 100%;
+        }
+    }
+}
+
+div caption{
+
+}
